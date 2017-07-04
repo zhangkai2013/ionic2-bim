@@ -1,0 +1,42 @@
+<ion-header align="center" no-border>
+	<ion-navbar color="primary">
+      <ion-title>工单详情</ion-title>
+    </ion-navbar>
+</ion-header>
+<ion-content class="order-info">
+	<!--工单内容-->
+	<ion-list class="qr-code-box">
+		<ion-item>设备名称：{{orderInfors.deviceName}}</ion-item>
+		<ion-item>设备编码：{{orderInfors.code}}</ion-item>
+		<ion-item>设备地址：{{orderInfors.address}}</ion-item>
+	</ion-list>
+	<ion-list>
+	  <ion-item>工单类型：{{orderInfors.orderType}}</ion-item>
+	  <ion-item>问题类型：{{orderInfors.personType}}</ion-item>
+	  <ion-item class="order-desc">
+	  	{{orderInfors.infoDesc}}
+	  </ion-item>
+	  <div ion-item>
+	  	故障照片：<br />
+	  	<div class="img-up">
+	  		<img src="assets/{{img}}" *ngFor="let img of orderInfors.img">
+	  	</div>
+	  </div>
+	</ion-list>
+	<ion-list>
+	  <ion-item>优先级：<span class="PLem1"></span>{{orderInfors.priority}}</ion-item>
+	  <ion-item>分配日期：{{orderInfors.time}}</ion-item>
+	  <ion-item>分配技工：{{orderInfors.distributionName}}</ion-item>
+	  <ion-item>备件：<span class="PLem2"></span>{{orderInfors.sparePart}}</ion-item>
+	</ion-list>
+	<ion-list>
+	  <ion-item>报修人：<span class="PLem1"></span>{{orderInfors.repairMan}}</ion-item>
+	  <ion-item>报修人电话：{{orderInfors.repairTel}}</ion-item>
+	</ion-list>
+	<!--end-->
+</ion-content>
+<ion-footer	align="center" (click)="MaintenanceDetailsPage()" no-border>
+  <ion-toolbar color="primary">
+    <ion-title>填写维护情况</ion-title>
+  </ion-toolbar>
+</ion-footer>

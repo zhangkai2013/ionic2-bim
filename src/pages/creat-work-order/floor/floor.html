@@ -1,0 +1,14 @@
+<ion-header align="center" no-border>
+	<ion-navbar color="primary">
+      <ion-title>设备地址</ion-title>
+    </ion-navbar>
+</ion-header>
+<ion-content class="creat-work-order">
+	<!--某某层-->
+	<ion-list class="qr-code-box">
+	  <button ion-item  *ngFor="let floor of floors" (click)="RoomPage(floor)">
+	    {{floor.name}}
+	  </button>
+	</ion-list>
+	<!--end-->
+</ion-content>

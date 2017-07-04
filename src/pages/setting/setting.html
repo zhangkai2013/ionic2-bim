@@ -1,0 +1,30 @@
+<ion-header align="center" no-border>
+	<ion-navbar color="primary">
+      <ion-title>设置</ion-title>
+    </ion-navbar>
+</ion-header>
+<ion-content class="setting-content">
+	<!--设置-->
+	<div class="name">
+		<img src="assets/{{setting.head}}" /><br />
+		{{setting.name}}
+	</div>
+	<ul class="setting-list">
+		<li>
+			<div class="fl ion"><ion-icon ios="ios-pin" md="md-pin"></ion-icon></div>
+			<div class="fl">URL</div>
+			<div class="fr val">{{setting.URL}}</div>
+		</li>
+		<li>
+			<div class="fl ion"><ion-icon ios="ios-chatboxes" md="md-chatboxes"></ion-icon></div>
+			<div class="fl">语言</div>
+			<div class="fr val">{{setting.language}}</div>
+		</li>
+	</ul>
+	<!--end-->
+</ion-content>
+<ion-footer	align="center" (click)="settings()" no-border>
+  <ion-toolbar color="primary">
+    <ion-title>退出登录</ion-title>
+  </ion-toolbar>
+</ion-footer>

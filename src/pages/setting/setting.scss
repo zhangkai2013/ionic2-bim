@@ -1,0 +1,11 @@
+page-setting {
+    .setting-content{ background-color: #F8F8F8; font-size: 16px;}
+    .name{ text-align:center; padding: 30px 0; margin-bottom: 20px; background-color: #FFFFFF;}
+    .name img{ width: 80px; height: 80px; margin-bottom: 10px; border-radius: 100%;}
+    .setting-list{ padding: 0; margin: 0; background-color: #FFFFFF;}
+    .setting-list li{ height: 50px; line-height: 50px; padding: 0 4%; overflow: hidden; zoom: 1; border-top: 1px solid #F8F8F8;}
+    .setting-list .fl{ float: left; display: inline;}
+    .setting-list .fr{ float: right; display: inline;}
+    .setting-list .ion{ margin-right: 10px;}
+    .setting-list .val{ color:#bbbbbb;}
+}

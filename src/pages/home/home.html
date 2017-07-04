@@ -1,0 +1,72 @@
+<ion-header align="center" no-border>
+	<ion-navbar color="primary">
+      <ion-buttons start>
+      <button ion-button icon-only (click)="settings()">
+         <ion-icon ios="ios-qr-scanner" md="md-qr-scanner"></ion-icon>
+      </button>
+   	  </ion-buttons>
+      <ion-title>首页</ion-title>
+      <ion-buttons end>
+      <button ion-button icon-only (click)="SettingPage()">
+      	<ion-icon ios="ios-settings" md="md-settings"></ion-icon>
+      </button>
+    </ion-buttons>
+    </ion-navbar>
+</ion-header>
+<ion-content>
+	<!--我的消息-->
+	<div class="home-tab">我的消息</div>
+	<ion-grid class="home-grid">
+	  <ion-row>
+	    <ion-col col-4 (click)="WorkOrderPage()">
+	    		<div class="home-grid-list">
+	    			<ion-badge color="danger" *ngIf="notices.sb>0">{{notices.sb}}</ion-badge>
+	    			<img src="assets/info.png" />
+	    		</div>
+	    		<p>设备异常报警</p>
+	    </ion-col>
+	    <ion-col col-4 (click)="WorkOrderPage()">
+	    		<div class="home-grid-list">
+	    			<ion-badge color="danger" *ngIf="notices.gd>0">{{notices.gd}}</ion-badge>
+	    			<img src="assets/workOrder.png" />
+	    		</div>
+	    		<p>工单提醒</p>
+	    </ion-col>
+	    <ion-col col-4 (click)="WorkOrderPage()">
+	    		<div class="home-grid-list">
+	    			<ion-badge color="danger" *ngIf="notices.tz>0">{{notices.tz}}</ion-badge>
+	    			<img src="assets/notice.png" />
+	    		</div>
+	    		<p>通知</p>
+	    </ion-col>
+	  </ion-row>
+	</ion-grid>
+	<!--管理-->
+	<div class="home-tab home-tab2">管理</div>
+	<ion-grid class="home-grid">
+	  <ion-row>
+	    <ion-col col-4 (click)="OperationsPage()">
+	    		<div class="home-grid-list">
+	    			<ion-badge color="danger" *ngIf="notices.yw>0">{{notices.yw}}</ion-badge>
+	    			<img src="assets/gears.png" />
+	    		</div>
+	    		<p>运维管理</p>
+	    </ion-col>
+	    <ion-col col-4 (click)="WorkOrderPage()">
+	    		<div class="home-grid-list">
+	    			<ion-badge color="danger" *ngIf="notices.zc>0">{{notices.zc}}</ion-badge>
+	    			<img src="assets/money.png" />
+	    		</div>
+	    		<p>资产管理</p>
+	    </ion-col>
+	    <ion-col col-4 (click)="WorkOrderPage()">
+	    		<div class="home-grid-list">
+	    			<ion-badge color="danger" *ngIf="notices.kg>0">{{notices.kj}}</ion-badge>
+	    			<img src="assets/box.png" />
+	    		</div>
+	    		<p>空间管理</p>
+	    </ion-col>
+	  </ion-row>
+	</ion-grid>
+	<!--end-->
+</ion-content>

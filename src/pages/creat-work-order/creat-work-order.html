@@ -1,0 +1,63 @@
+<ion-header align="center" no-border>
+	<ion-navbar color="primary">
+      <ion-title>创建工单</ion-title>
+    </ion-navbar>
+</ion-header>
+<ion-content class="creat-work-order">
+	<!--工单内容-->
+	<ion-list class="qr-code-box">
+	  <ion-item>
+	    <ion-label fixed>设备名称：</ion-label>
+	    <ion-input type="text" value=""></ion-input>
+	  </ion-item>
+	  <ion-item>
+	    <ion-label fixed>设备编码：</ion-label>
+	    <ion-input type="text" value=""></ion-input>
+	  </ion-item>
+	  <button ion-item  (click)="LargeBuildingPage()">
+	    设备地址：某某大厦－xx楼－ABCD房间
+	  </button>
+	  <!--扫码录入-->
+	  <div class="qr-code" (click)="settings()">
+	    <img class="ion-qrcode" src="assets/qrcode.png" /><br/>
+	  	扫码录入
+	  </div>
+	  <!--扫码录入 end-->
+	</ion-list>
+	<ion-list>
+	  <!--<button ion-item>
+	    工单类型：设备报警应对
+	  </button>-->
+	  <ion-item>
+	    <ion-label>工单类型：</ion-label>
+	    <ion-select [(ngModel)]="toppings">
+	      <ion-option value="设备报警应对1">设备报警应对1</ion-option>
+	      <ion-option value="设备报警应对2">设备报警应对2</ion-option>
+	      <ion-option value="设备报警应对3">设备报警应对3</ion-option>
+	    </ion-select>
+	  </ion-item>
+	  <ion-item>
+	    <ion-label>问题的类型：</ion-label>
+	    <ion-select [(ngModel)]="toppings">
+	      <ion-option value="问题的类型1">问题的类型1</ion-option>
+	      <ion-option value="问题的类型2">问题的类型2</ion-option>
+	      <ion-option value="问题的类型3">问题的类型3</ion-option>
+	    </ion-select>
+	  </ion-item>
+	  <div ion-item class="creat-textarea">
+	  	<textarea rows="5" placeholder="问题描述"></textarea>
+	  </div>
+	  <div ion-item>
+	  	故障照片：<br />
+	  	<div class="img-up">
+	  		<img src="assets/ico-add-img.jpg">
+	  	</div>
+	  </div>
+	</ion-list>
+	<!--end-->
+</ion-content>
+<ion-footer	align="center" (click)="settings()" no-border>
+  <ion-toolbar color="primary">
+    <ion-title>提交</ion-title>
+  </ion-toolbar>
+</ion-footer>

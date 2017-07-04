@@ -1,0 +1,39 @@
+<ion-header align="center" no-border>
+	<ion-navbar color="primary">
+      <ion-title>填写维护情况</ion-title>
+    </ion-navbar>
+</ion-header>
+<ion-content class="order-info">
+	<!--工单内容-->
+	<ion-list class="qr-code-box">
+		<ion-item>
+			<ion-label fixed>维护日期：</ion-label> 
+			<ion-datetime displayFormat="YYYY MM DD h:mm A" ></ion-datetime>
+		</ion-item>
+		<ion-item>
+			<ion-label fixed>维护时间：</ion-label> 
+			<ion-input type="text" value=""></ion-input>
+		</ion-item>
+		<ion-item>
+			<ion-label fixed>费用：</ion-label><span class="PLem2"></span>
+			<ion-input type="text" value=""></ion-input>
+		</ion-item>
+	</ion-list>
+	<ion-list>
+	  <div ion-item class="creat-textarea">
+	  	<textarea rows="5" placeholder="维护情况描述"></textarea>
+	  </div>
+	  <div ion-item>
+	  	维护照片：<br />
+	  	<div class="img-up">
+	  		<img src="assets/ico-add-img.jpg">
+	  	</div>
+	  </div>
+	</ion-list>
+	<!--end-->
+</ion-content>
+<ion-footer	align="center" (click)="settings()" no-border>
+  <ion-toolbar color="primary">
+    <ion-title>完成工单</ion-title>
+  </ion-toolbar>
+</ion-footer>

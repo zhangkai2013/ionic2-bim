@@ -1,0 +1,49 @@
+<ion-header align="center" no-border hide-back-button="true">
+	<ion-navbar color="primary">
+      <ion-buttons start>
+      <button ion-button icon-only (click)="settings()">
+         <ion-icon ios="ios-qr-scanner" md="md-qr-scanner"></ion-icon>
+      </button>
+   	  </ion-buttons>
+      <ion-title>运维管理</ion-title>
+      <ion-buttons end>
+      <button ion-button clear (click)="CreatWorkOrderPage()">
+      	创建工单
+      </button>
+    </ion-buttons>
+    </ion-navbar>
+</ion-header>
+<ion-content class="work-order">
+	<!--下拉刷新-->
+ 	<ion-refresher (ionRefresh)="doRefresh($event)">
+      <ion-refresher-content
+        pullingIcon="arrow-dropdown"
+        pullingText="获取最新数据..."
+        refreshingSpinner="circles"
+        refreshingText="刷新完毕">
+      </ion-refresher-content>
+    </ion-refresher>
+ 	<!--列表-->
+	<ion-list>
+      <button ion-item class="operations-tit">
+	      <ion-label>待处理工单</ion-label>
+	      <ion-note item-end (click)="AllWorksOrderPage()">查看所有工单</ion-note>
+	    </button>
+	  <ion-item *ngFor="let item of items" (click)="OrderInfoPage(item.id)">
+	    <ion-avatar item-start>
+	      <img src="assets/{{item.img}}">
+	    </ion-avatar>
+	    <h2>{{item.name}}</h2>
+	    <h3>{{item.tit}}</h3>
+	    <p>{{item.info}}</p>
+	  </ion-item>
+	</ion-list>
+	<!--上拉加载-->
+	<ion-infinite-scroll (ionInfinite)="doInfinite($event)">
+      <ion-infinite-scroll-content
+        loadingSpinner="bubbles"
+        loadingText="Loading more data...">
+      </ion-infinite-scroll-content>
+    </ion-infinite-scroll>
+    <!--end-->
+</ion-content>

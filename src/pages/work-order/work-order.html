@@ -1,0 +1,38 @@
+<ion-header align="left">
+  <ion-navbar color="primary">
+    <ion-title>工单提醒</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content class="work-order">
+	<!--下拉刷新-->
+ 	<ion-refresher (ionRefresh)="doRefresh($event)">
+      <ion-refresher-content
+        pullingIcon="arrow-dropdown"
+        pullingText="获取最新数据..."
+        refreshingSpinner="circles"
+        refreshingText="刷新完毕">
+      </ion-refresher-content>
+    </ion-refresher>
+ 	<!--列表-->
+	<ion-list>
+	  <!--<ion-list-header align="center">
+		   <div>{{item.time}}</div>
+	  </ion-list-header>-->
+	  <ion-item *ngFor="let item of items" (click)="OrderInfoPage(item.id)">
+	    <ion-avatar item-start>
+	      <img src="assets/{{item.img}}">
+	    </ion-avatar>
+	    <h2>{{item.name}}</h2>
+	    <h3>{{item.tit}}</h3>
+	    <p>{{item.info}}</p>
+	  </ion-item>
+	</ion-list>
+	<!--上拉加载-->
+	<ion-infinite-scroll (ionInfinite)="doInfinite($event)">
+      <ion-infinite-scroll-content
+        loadingSpinner="bubbles"
+        loadingText="Loading more data...">
+      </ion-infinite-scroll-content>
+    </ion-infinite-scroll>
+    <!--end-->
+</ion-content>

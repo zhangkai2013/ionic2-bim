@@ -1,0 +1,30 @@
+<ion-header align="center" no-border>
+	<ion-navbar color="primary">
+      <ion-title>登录</ion-title>
+    </ion-navbar>
+</ion-header>
+<ion-content>
+	<!--登录-->
+	<div class="marT30"></div>
+	<ion-list inset>
+	   <ion-item>
+	    <ion-input type="text" placeholder="账号"></ion-input>
+	  </ion-item>
+	  <ion-item>
+	    <ion-input type="password" placeholder="密码"></ion-input>
+	  </ion-item>
+	  <!--<ion-item>
+	    <ion-input type="text" value="" placeholder="URL"></ion-input>
+	  </ion-item>-->
+	  <ion-item class="url" (click)="UrlPage()">
+	    URL
+	  </ion-item>
+	</ion-list>
+	<div padding>
+		<button ion-button color="primary" block>登录</button>
+	</div>
+	<div class="language">
+		Language
+	</div>
+	<!--end-->
+</ion-content>

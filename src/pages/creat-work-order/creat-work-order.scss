@@ -1,0 +1,9 @@
+page-creat-work-order {
+    .creat-work-order{ background-color: #f8f8f8;}
+    .creat-textarea textarea{ width: 100%; resize: none; border: 0;}
+    .img-up{ margin-top: 10px; white-space: normal;}
+    .img-up img{ width: 80px; height: 80px; margin-right: 10px; margin-bottom: 10px;}
+    .qr-code-box{ position: relative;}
+    .qr-code{ padding: 16px; text-align: center; background-color: #FFFFFF; position: absolute; right: 0; top: 14px;}
+    .ion-qrcode{ width: 30px; height: 30px; margin-bottom: 8px; display: inline-block;}
+}

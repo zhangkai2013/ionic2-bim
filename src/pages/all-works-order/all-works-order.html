@@ -1,0 +1,18 @@
+<ion-header align="center" no-border>
+	<ion-navbar color="primary">
+	 <!--<ion-buttons start>
+      <button ion-button icon-only (click)="goBack()">
+      	<ion-icon ios="ios-arrow-back" md="md-arrow-back"></ion-icon>
+      </button>
+   	  </ion-buttons>-->
+      <ion-title>所有订单</ion-title>
+    </ion-navbar>
+</ion-header>
+<ion-content>
+	<ion-tabs #mainTabs color="primary" tabsPlacement="top" selectedIndex="0">
+	  <ion-tab tabTitle="客户报修" [root]="tab1Root" ></ion-tab>
+	  <ion-tab tabTitle="日常检修" [root]="tab2Root" ></ion-tab>
+	  <ion-tab tabTitle="预防性维护" [root]="tab3Root"></ion-tab>
+	  <ion-tab tabTitle="报警应对" [root]="tab4Root"></ion-tab>
+	</ion-tabs>
+</ion-content>

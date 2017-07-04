@@ -1,0 +1,20 @@
+<ion-header align="center" no-border>
+	<ion-navbar color="primary">
+      <ion-title>URL</ion-title>
+	  <ion-buttons end>
+	     <button ion-button clear (click)="settings()">
+	     	添加
+	     </button>
+	  </ion-buttons>
+    </ion-navbar>
+</ion-header>
+<ion-content class="setting-content">
+	<!--URL-->
+	<ion-list radio-group>
+		<ion-item *ngFor="let item of items" (click)="settings()">
+		  <ion-radio color="primary" item-start></ion-radio>
+		  <ion-label>{{item.name}}</ion-label>
+	      <ion-note item-end>{{item.ip}}</ion-note>
+		</ion-item>
+	</ion-list>
+</ion-content>
